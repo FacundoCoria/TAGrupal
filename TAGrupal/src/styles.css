@@ -39,10 +39,10 @@ body {
     flex-direction: column;     
     background-color: #dc8abb;
     border-radius: 8px;
-    max-height: 600px; /* Establecer altura máxima */
+    max-height: 250px; /* Establecer altura máxima */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
-    width: 100%; /* Ocupa todo el ancho en móviles */
+    width: 80%; /* Ocupa todo el ancho en móviles */
     overflow-y: auto; /* Scroll vertical dentro de cada columna */
     text-align: center;
 }
@@ -57,7 +57,7 @@ body {
 
     .column {
         width: calc(30% - 10px); /* Tres columnas por fila, ajustando el espacio */
-        max-height: 400px; /* Altura máxima para tabletas */
+        max-height: 200px; /* Altura máxima para tabletas */
         overflow-y: auto; /* Scroll vertical dentro de cada columna */
         margin: 5px; /* Espacio entre columnas */
     }
@@ -85,6 +85,6 @@ body {
     .column {
         width: 200px; /* Tamaño fijo para las columnas en pantallas grandes */
         min-height: 400px;
-        max-height: 600px; /* Altura máxima para pantallas grandes */
+        max-height: 400px; /* Altura máxima para pantallas grandes */
     }
 }
