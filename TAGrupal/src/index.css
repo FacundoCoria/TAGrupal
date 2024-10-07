@@ -25,13 +25,15 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column; /* Cambiado a columna para móviles */
+  align-items: center; /* Para centrar en el eje cruzado */
+  justify-content: center; /* Para centrar en el eje principal */
   min-width: 320px;
   min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2.5em; /* Tamaño de fuente más pequeño para móviles */
   line-height: 1.1;
 }
 
@@ -52,6 +54,18 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Estilos para pantallas más grandes */
+@media (min-width: 768px) {
+  body {
+    flex-direction: row; /* Cambiar a fila para pantallas más grandes */
+    place-items: center;
+  }
+  
+  h1 {
+    font-size: 3.2em; /* Aumentar el tamaño de fuente para pantallas más grandes */
+  }
 }
 
 @media (prefers-color-scheme: light) {

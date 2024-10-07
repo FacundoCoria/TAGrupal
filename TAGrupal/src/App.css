@@ -6,25 +6,36 @@ body {
 }
 
 .app {
-  max-width: 1200px;
+  max-width: 100%; /* Ocupa el ancho completo en móvil */
   margin: 0 auto;
 }
 
 .board {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Cambiar a columna en móvil */
 }
 
 .column {
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin: 0 10px;
+  margin: 10px 0; /* Margen superior e inferior */
   padding: 10px;
-  width: 30%;
+  width: 100%; /* Ocupa el ancho completo en móvil */
 }
 
 .column h2 {
   text-align: center;
   color: #333;
+}
+
+@media (min-width: 600px) {
+  .board {
+    flex-direction: row; /* Cambiar a fila en pantallas más grandes */
+  }
+
+  .column {
+    width: 30%; /* Restablecer el ancho a 30% en pantallas más grandes */
+    margin: 0 10px; /* Ajustar el margen lateral */
+  }
 }

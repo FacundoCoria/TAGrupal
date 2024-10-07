@@ -1,3 +1,4 @@
+/* Estilos generales para dispositivos móviles */
 body {
     background-color: #E6E6FA; 
     font-family: Arial, sans-serif;
@@ -5,14 +6,14 @@ body {
 }
 
 .board {
-    max-width: 1200px;
+    max-width: 100%; /* Para ocupar todo el ancho en móviles */
     margin: 0 auto;
+    padding: 10px; /* Añadido para un poco de espacio alrededor */
 }
 
 .add-task-button {
-    position: absolute; 
-    top: 10px;  
-    left: 10px; 
+    position: relative; /* Cambiado a relative para que se ajuste en móviles */
+    margin: 10px; /* Margen en lugar de posición absoluta */
     padding: 10px 20px;
     background-color: #007bff; /* Color del botón */
     color: white;
@@ -20,34 +21,68 @@ body {
     border-radius: 5px;
     cursor: pointer;
     z-index: 1000;
+    display: block; /* Para asegurarte de que ocupe todo el ancho */
 }
 
 .column-container {
     margin-top: 10px; 
     display: flex;
-    gap: 20px;
-    justify-content: space-around;
-    overflow-x: auto; /* Permite el desplazamiento horizontal */
-    overflow-y: hidden; /* Evita el desplazamiento vertical */
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    flex-direction: column; /* Cambio a columna para móviles */
+    gap: 10px; /* Espacio reducido para pantallas pequeñas */
+    width: 100%;
+    align-items: center; /* Centramos las columnas */
+    overflow-x: hidden; /* Evita el desplazamiento horizontal en móviles */
 }
-
 
 .column {
     display: flex;
     flex-direction: column;     
     background-color: #dc8abb;
     border-radius: 8px;
-    min-height: 400px;
-    max-height: 600px;
+    max-height: 600px; /* Establecer altura máxima */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
-    width: 200px; /* Tamaño fijo para las columnas */
+    width: 100%; /* Ocupa todo el ancho en móviles */
     overflow-y: auto; /* Scroll vertical dentro de cada columna */
-
 }
 
-.column h2 {
-    text-align: center;
+/* Estilos para tabletas */
+@media (min-width: 600px) and (max-width: 900px) {
+    .column-container {
+        flex-direction: row; /* Cambiar a fila para tabletas */
+        flex-wrap: wrap; /* Permitir que las columnas se ajusten a varias filas */
+        justify-content: center; /* Centrar columnas en la fila */
+    }
+
+    .column {
+        width: calc(30% - 10px); /* Tres columnas por fila, ajustando el espacio */
+        max-height: 400px; /* Altura máxima para tabletas */
+        overflow-y: auto; /* Scroll vertical dentro de cada columna */
+        margin: 5px; /* Espacio entre columnas */
+    }
 }
 
+/* Estilos para pantallas más grandes (escritorio) */
+@media (min-width: 901px) {
+    .board {
+        max-width: 1200px; /* Establecer un ancho máximo en pantallas más grandes */
+    }
+
+    .add-task-button {
+        position: absolute; 
+        top: 10px;  
+        left: 10px; 
+        width: auto; /* Ancho automático en pantallas grandes */
+    }
+
+    .column-container {
+        flex-direction: row; /* Fila para pantallas grandes */
+        gap: 20px; /* Mayor espacio entre columnas en pantallas más grandes */
+        overflow-x: auto; /* Permite el desplazamiento horizontal en pantallas grandes */
+    }
+
+    .column {
+        width: 200px; /* Tamaño fijo para las columnas en pantallas grandes */
+        max-height: 600px; /* Altura máxima para pantallas grandes */
+    }
+}
