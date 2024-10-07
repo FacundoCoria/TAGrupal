@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { TaskContext } from '../../Contexts/TaskContext.jsx';
+import '../../EditTaskModal.css';
 
 function EditTaskModal({ isOpen, onClose }) {
   const { currentTask, updateTask } = useContext(TaskContext);
-  const [taskData, setTaskData] = useState({ title: '', status: '', description: '' }); 
+  const [taskData, setTaskData] = useState({ title: '', status: '', description: '', assigned: '', priority: '' }); 
 
   useEffect(() => {
     if (currentTask) {
@@ -11,6 +12,8 @@ function EditTaskModal({ isOpen, onClose }) {
         title: currentTask.title,
         status: currentTask.status,
         description: currentTask.description,
+        assigned: currentTask.assigned || '',
+        priority: currentTask.priority || 'Baja', // Establece un valor por defecto
       });
     }
   }, [currentTask]);
@@ -75,7 +78,6 @@ function EditTaskModal({ isOpen, onClose }) {
             <option value="In Progress">In Progress</option>
             <option value="Blocked">Blocked</option>
             <option value="Done">Done</option>
-          
           </select>
           <button type="submit">Actualizar</button>
         </form>

@@ -27,6 +27,9 @@ body {
     display: flex;
     gap: 20px;
     justify-content: space-around;
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    overflow-y: hidden; /* Evita el desplazamiento vertical */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
 }
 
 
@@ -41,8 +44,10 @@ body {
     padding: 10px;
     width: 200px; /* Tamaño fijo para las columnas */
     overflow-y: auto; /* Scroll vertical dentro de cada columna */
+
 }
 
 .column h2 {
     text-align: center;
 }
+
