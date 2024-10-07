@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { TaskContext } from '../../Contexts/TaskContext.jsx';
-import '../../AddTaskModal.css'; // Importa el archivo CSS
+import './AddTaskModal.css'; // Importa el archivo CSS
 
 const AddTaskModal = ({ isModalOpen, setIsModalOpen }) => {  // Recibe las props para controlar la apertura del modal
     const { addTask } = useContext(TaskContext);

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { TaskContext } from '../../Contexts/TaskContext.jsx';
-import '../../EditTaskModal.css';
+import './EditTaskModal.css';
 
 function EditTaskModal({ isOpen, onClose }) {
   const { currentTask, updateTask } = useContext(TaskContext);
