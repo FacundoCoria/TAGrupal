@@ -44,6 +44,7 @@ body {
     padding: 10px;
     width: 100%; /* Ocupa todo el ancho en móviles */
     overflow-y: auto; /* Scroll vertical dentro de cada columna */
+    text-align: center;
 }
 
 /* Estilos para tabletas */
@@ -83,6 +84,7 @@ body {
 
     .column {
         width: 200px; /* Tamaño fijo para las columnas en pantallas grandes */
+        min-height: 400px;
         max-height: 600px; /* Altura máxima para pantallas grandes */
     }
 }
