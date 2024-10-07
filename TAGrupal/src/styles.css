@@ -1,0 +1,48 @@
+body {
+    background-color: #E6E6FA; 
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; 
+}
+
+.board {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.add-task-button {
+    position: absolute; 
+    top: 10px;  
+    left: 10px; 
+    padding: 10px 20px;
+    background-color: #007bff; /* Color del botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.column-container {
+    margin-top: 10px; 
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+
+.column {
+    display: flex;
+    flex-direction: column;     
+    background-color: #dc8abb;
+    border-radius: 8px;
+    min-height: 400px;
+    max-height: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 200px; /* Tamaño fijo para las columnas */
+    overflow-y: auto; /* Scroll vertical dentro de cada columna */
+}
+
+.column h2 {
+    text-align: center;
+}

@@ -1,0 +1,36 @@
+.task { 
+    margin: 10px 0; /* Espacio entre las tareas */
+    padding: 10px;
+    border-radius: 4px;
+    background-color: white;
+    cursor: move;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.task strong {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.task p {
+    margin: 5px 0;
+}
+
+.task button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+.task button:hover {
+    background-color: #0056b3;
+}

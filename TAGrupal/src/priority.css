@@ -1,0 +1,11 @@
+.task.Baja {
+    border-left: 5px solid green;
+}
+
+.task.Media {
+    border-left: 5px solid orange;
+}
+
+.task.Alta {
+    border-left: 5px solid red;
+}
