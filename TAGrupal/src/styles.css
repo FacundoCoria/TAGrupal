@@ -39,10 +39,11 @@ body {
     flex-direction: column;     
     background-color: #dc8abb;
     border-radius: 8px;
-    max-height: 250px; /* Establecer altura máxima */
+    min-height: 300px;
+    max-height: 300px; /* Establecer altura máxima */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
-    width: 80%; /* Ocupa todo el ancho en móviles */
+    width: 280px; /* Ocupa todo el ancho en móviles */
     overflow-y: auto; /* Scroll vertical dentro de cada columna */
     text-align: center;
 }
@@ -57,7 +58,8 @@ body {
 
     .column {
         width: calc(30% - 10px); /* Tres columnas por fila, ajustando el espacio */
-        max-height: 200px; /* Altura máxima para tabletas */
+        min-height: 300px;
+        max-height: 300px; /* Altura máxima para tabletas */
         overflow-y: auto; /* Scroll vertical dentro de cada columna */
         margin: 5px; /* Espacio entre columnas */
     }
@@ -66,7 +68,7 @@ body {
 /* Estilos para pantallas más grandes (escritorio) */
 @media (min-width: 901px) {
     .board {
-        max-width: 1200px; /* Establecer un ancho máximo en pantallas más grandes */
+        max-width: 1400px; /* Establecer un ancho máximo en pantallas más grandes */
     }
 
     .add-task-button {
@@ -83,7 +85,7 @@ body {
     }
 
     .column {
-        width: 200px; /* Tamaño fijo para las columnas en pantallas grandes */
+        width: 320px; /* Tamaño fijo para las columnas en pantallas grandes */
         min-height: 400px;
         max-height: 400px; /* Altura máxima para pantallas grandes */
     }

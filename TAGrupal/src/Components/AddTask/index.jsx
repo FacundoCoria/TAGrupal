@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { TaskContext } from '../../Contexts/TaskContext.jsx';
-import './AddTaskModal.css'; // Importa el archivo CSS
+import '../../AddTaskModal.css';
 
 const AddTaskModal = ({ isModalOpen, setIsModalOpen }) => {  // Recibe las props para controlar la apertura del modal
     const { addTask } = useContext(TaskContext);
@@ -14,8 +14,16 @@ const AddTaskModal = ({ isModalOpen, setIsModalOpen }) => {  // Recibe las props
     const handleSubmit = (e) => {
         e.preventDefault();
         addTask({ title, description, assigned, priority, status, deadline });
+        // Limpiar los campos después de agregar la tarea
+        setTitle('');
+        setDescription('');
+        setAssigned('');
+        setPriority('Baja');
+        setStatus('To Do');
+        setDeadline('');
         setIsModalOpen(false); // Cerrar el modal después de agregar la tarea
     };
+    
 
     return (
         <>
